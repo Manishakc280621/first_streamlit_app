@@ -26,7 +26,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 #new section to display fruityvice api request
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 
 # write your own comment -what does the next line do? 
