@@ -43,9 +43,7 @@ streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 
-
+fruit_choices = streamlit.text_input('What fruit would you like to add?','Jackfruit')
+streamlit.write('The user entered ', fruit_choices)
 fruityvice_responses = requests.get("https://fruityvice.com/api/fruit/" + "jackfruit")
-# write your own comment -what does the next line do? 
-fruityvice_normalize = pandas.json_normalize(fruityvice_responses.json())
-# write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalize)
+
